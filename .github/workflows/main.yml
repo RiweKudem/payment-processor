@@ -1,0 +1,22 @@
+name: Payment Processor Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print a message
+        run: echo "Building payment processor..."
+
+      - name: Run build script
+        run: |
+          echo "Building payment processor..."
+          echo "Success!" > build.log
